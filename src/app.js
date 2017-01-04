@@ -3,8 +3,6 @@ var app = angular.module('app', []);
 app.controller('IngressoController', function($scope){
     $scope.diaDaSemana = new Date().getDay();
 
-    $scope.feriado = 7;
-
     var criancas = 5.50;
     var estudantes = 8.00;
     var idosos = 6.00;
@@ -12,8 +10,8 @@ app.controller('IngressoController', function($scope){
     var valorFinal = 0;
 
 
-    $scope.calculaIngresso = function(tipoIngresso, quantidade, diaDaSemana, carteira){
-      switch (diaDaSemana) {
+    $scope.calculaIngresso = function(tipoIngresso, quantidade, carteira){
+      switch ($scope.diaDaSemana) {
         case 1:
           switch (tipoIngresso) {
             case 'Criancas':
