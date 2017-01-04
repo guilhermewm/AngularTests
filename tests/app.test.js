@@ -16,7 +16,7 @@ describe('Ingresso Controller', function(){
 
       it('Crianças', function(){
         scope.calculaIngresso('Criancas', 1);
-        var valor = 4.95;
+        var valor = 3.85;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
@@ -28,13 +28,13 @@ describe('Ingresso Controller', function(){
 
       it('Estudantes sem carteirinha', function(){
         scope.calculaIngresso('Estudantes', 1, false);
-        var valor = 7.2;
+        var valor = 4;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
       it('Idosos', function(){
         scope.calculaIngresso('Idosos', 1);
-        var valor = 5.4;
+        var valor = 3.6;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
