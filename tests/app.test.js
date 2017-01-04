@@ -15,25 +15,25 @@ describe('Ingresso Controller', function(){
     describe('Calcula valor do dia atual: ', function(){
 
       it('Crianças', function(){
-        scope.calculaIngresso('Criancas', 1);
+        scope.calculaIngresso('Criancas');
         var valor = 3.85;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
       it('Estudantes com carteirinha', function(){
-        scope.calculaIngresso('Estudantes', 1, true);
+        scope.calculaIngresso('Estudantes', true);
         var valor = 4;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
       it('Estudantes sem carteirinha', function(){
-        scope.calculaIngresso('Estudantes', 1, false);
+        scope.calculaIngresso('Estudantes', false);
         var valor = 4;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })
 
       it('Idosos', function(){
-        scope.calculaIngresso('Idosos', 1);
+        scope.calculaIngresso('Idosos');
         var valor = 3.6;
         expect(scope.valorFinal).to.equal(valor.toFixed(2));
       })

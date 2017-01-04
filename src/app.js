@@ -3,6 +3,8 @@ var app = angular.module('app', []);
 app.controller('IngressoController', function($scope){
     $scope.diaDaSemana = new Date().getDay();
 
+    var quantidadeDeIngressoConstante = 1;
+
     var criancas = 5.50;
     var estudantes = 8.00;
     var idosos = 6.00;
@@ -10,22 +12,22 @@ app.controller('IngressoController', function($scope){
     var valorFinal = 0;
 
 
-    $scope.calculaIngresso = function(tipoIngresso, quantidade, carteira){
+    $scope.calculaIngresso = function(tipoIngresso, carteira){
       switch ($scope.diaDaSemana) {
         case 1:
           switch (tipoIngresso) {
             case 'Criancas':
-              valorFinal = (criancas * quantidade) - (criancas * 0.1);
+              valorFinal = (criancas * quantidadeDeIngressoConstante) - (criancas * 0.1);
               break;
             case 'Estudantes':
               if(carteira){
-                valorFinal = (estudantes * quantidade) - (estudantes * 0.35);
+                valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.35);
               }else{
-                valorFinal = (estudantes * quantidade) - (estudantes * 0.1);
+                valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.1);
               }
               break;
             case 'Idosos':
-              valorFinal = (idosos * quantidade) - (idosos * 0.1);
+              valorFinal = (idosos * quantidadeDeIngressoConstante) - (idosos * 0.1);
               break;
           }
           break;
@@ -33,17 +35,17 @@ app.controller('IngressoController', function($scope){
         case 2:
           switch (tipoIngresso) {
             case 'Criancas':
-              valorFinal = (criancas * quantidade) - (criancas * 0.15);
+              valorFinal = (criancas * quantidadeDeIngressoConstante) - (criancas * 0.15);
               break;
               case 'Estudantes':
                 if(carteira){
-                  valorFinal = (estudantes * quantidade) - (estudantes * 0.35);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.35);
                 }else{
-                  valorFinal = (estudantes * quantidade) - (estudantes * 0.05);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.05);
                 }
                 break;
             case 'Idosos':
-              valorFinal = (idosos * quantidade) - (idosos * 0.15);
+              valorFinal = (idosos * quantidadeDeIngressoConstante) - (idosos * 0.15);
               break;
           }
           break;
@@ -51,13 +53,13 @@ app.controller('IngressoController', function($scope){
         case 3:
           switch (tipoIngresso) {
             case 'Criancas':
-              valorFinal = (criancas * quantidade) - (criancas * 0.30);
+              valorFinal = (criancas * quantidadeDeIngressoConstante) - (criancas * 0.30);
               break;
               case 'Estudantes':
-                valorFinal = (estudantes * quantidade) - (estudantes * 0.50);
+                valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.50);
                 break;
             case 'Idosos':
-              valorFinal = (idosos * quantidade) - (idosos * 0.40);
+              valorFinal = (idosos * quantidadeDeIngressoConstante) - (idosos * 0.40);
               break;
           }
           break;
@@ -65,17 +67,17 @@ app.controller('IngressoController', function($scope){
         case 4:
           switch (tipoIngresso) {
             case 'Criancas':
-              valorFinal = (criancas * quantidade);
+              valorFinal = (criancas * quantidadeDeIngressoConstante);
               break;
               case 'Estudantes':
                 if(carteira){
-                  valorFinal = (estudantes * quantidade) - (estudantes * 0.35);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.35);
                 }else{
-                  valorFinal = (estudantes * quantidade) - (estudantes * 0.30);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.30);
                 }
                 break;
             case 'Idosos':
-              valorFinal = (idosos * quantidade) - (idosos * 0.30);
+              valorFinal = (idosos * quantidadeDeIngressoConstante) - (idosos * 0.30);
               break;
           }
           break;
@@ -83,17 +85,17 @@ app.controller('IngressoController', function($scope){
         case 5:
           switch (tipoIngresso) {
             case 'Criancas':
-              valorFinal = (criancas * quantidade) - (criancas * 0.11);
+              valorFinal = (criancas * quantidadeDeIngressoConstante) - (criancas * 0.11);
               break;
               case 'Estudantes':
                 if(carteira){
-                  valorFinal = (estudantes * quantidade) - (estudantes * 0.35);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.35);
                 }else{
-                  valorFinal = (estudantes * quantidade);
+                  valorFinal = (estudantes * quantidadeDeIngressoConstante);
                 }
                 break;
             case 'Idosos':
-              valorFinal = (idosos * quantidade);
+              valorFinal = (idosos * quantidadeDeIngressoConstante);
               break;
           }
           break;
@@ -103,17 +105,17 @@ app.controller('IngressoController', function($scope){
           case 7:
             switch (tipoIngresso) {
               case 'Criancas':
-                valorFinal = (criancas * quantidade);
+                valorFinal = (criancas * quantidadeDeIngressoConstante);
                 break;
                 case 'Estudantes':
                   if(carteira){
-                    valorFinal = (estudantes * quantidade) - (estudantes * 0.35);
+                    valorFinal = (estudantes * quantidadeDeIngressoConstante) - (estudantes * 0.35);
                   }else{
-                    valorFinal = (estudantes * quantidade);
+                    valorFinal = (estudantes * quantidadeDeIngressoConstante);
                   }
                   break;
               case 'Idosos':
-                valorFinal = (idosos * quantidade) - (idosos * 0.05);
+                valorFinal = (idosos * quantidadeDeIngressoConstante) - (idosos * 0.05);
                 break;
             }
             break;
